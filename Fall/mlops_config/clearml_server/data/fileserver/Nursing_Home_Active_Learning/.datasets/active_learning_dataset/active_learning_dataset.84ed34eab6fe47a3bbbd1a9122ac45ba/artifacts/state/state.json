@@ -1,0 +1,561 @@
+{
+    "dataset_file_entries": [
+        {
+            "artifact_name": "data",
+            "hash": "6117000a0142881fe7b6faed675b970656a7c1fe3a9bea0948cb9dd2c3bb1da2",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_307_Bed_20260710_205259.jpg",
+            "size": 99040
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_210911.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "cd96619cb97cc4ddfe3d7136526f2867e23f052086ed89aaa38f67040ad9c885",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "predictions/snapshot_101.jpg.json",
+            "size": 530
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_205900.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "0a769259b947b8c7d78a33e6026c0cdd73d69c7c3a334791c4efdfee333f3564",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_304_Bed_20260710_205255.jpg",
+            "size": 197135
+        },
+        {
+            "artifact_name": "data",
+            "hash": "84edb53c389538ac6bea1b4440ff0dafb4acf10483f54d20d860849dab6b1221",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_306_Bed_20260710_204109.jpg",
+            "size": 193834
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_204103.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_205859.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_301_Bed_20260709_180710.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "fe1fafdfc43bedd1059e895104ff07cb2ebc4e6fa569645e88f16687d423c2d3",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": ".env",
+            "size": 63
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_211441.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_303_Bed_20260709_191639.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_212138.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_211438.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "af78a601287b4d60c5ba1581e3822847263f98e6416efe16a012f3df1bddf9b3",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_routine_20260710_205258.jpg",
+            "size": 195687
+        },
+        {
+            "artifact_name": "data",
+            "hash": "8b9675cb39f3c9f2412e54d552beebbcf0780c933dfdb4b65866bd789829d06b",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_routine_20260710_205258.jpg",
+            "size": 193634
+        },
+        {
+            "artifact_name": "data",
+            "hash": "f58ca7091dd1f032eb510be933781855deec16fee9b41d442feb666c33c12251",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_307_Bed_routine_20260710_205258.jpg",
+            "size": 99101
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_204053.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_204055.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_205659.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "0d36ebea939baf1f9a7998ee84bf4f5ccce6f98caf0460b0e19e30ece7621b78",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_308_Bed_20260710_205301.jpg",
+            "size": 55799
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_205259.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "0d36ebea939baf1f9a7998ee84bf4f5ccce6f98caf0460b0e19e30ece7621b78",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot.jpg",
+            "size": 55799
+        },
+        {
+            "artifact_name": "data",
+            "hash": "65e60258a70fd77dbd0e117bb8882e51865f9e57ec28a702094e8b985733f755",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "label_studio.sqlite3",
+            "size": 1392640
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_212820.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "e0e762e75c248491802fea45e4c4d7e0565b2f16dd5383be6317d67587b63120",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_309_Bed_20260710_205256.jpg",
+            "size": 182624
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_303_Bed_20260709_191610.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "84edb53c389538ac6bea1b4440ff0dafb4acf10483f54d20d860849dab6b1221",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_306_Bed_20260710_205713.jpg",
+            "size": 193834
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_301_Bed_20260709_181531.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/.DS_Store",
+            "size": 6148
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6834be24107f5f481ab9f72406e10c2fa8701ca81588a7b45abf62d46dd72b6b",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_308_Bed_routine_20260710_205258.jpg",
+            "size": 56359
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_211742.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_205902.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_303_Bed_20260709_191707.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_213007.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_212821.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "0a769259b947b8c7d78a33e6026c0cdd73d69c7c3a334791c4efdfee333f3564",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_304_Bed_20260710_204050.jpg",
+            "size": 197135
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_205658.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_303_Bed_20260709_180708.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "5e0ec471b57667586059978b8ecf1caa7f3f739bd75b5007852d2bdf872900d1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_routine_20260710_205258.jpg",
+            "size": 196208
+        },
+        {
+            "artifact_name": "data",
+            "hash": "70f9fe25f58430bbe1a0ab6698807f5448fda5c9c5c5842c27f1e6681a1e688a",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": ".DS_Store",
+            "size": 8196
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6117000a0142881fe7b6faed675b970656a7c1fe3a9bea0948cb9dd2c3bb1da2",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_307_Bed_20260710_204053.jpg",
+            "size": 99040
+        },
+        {
+            "artifact_name": "data",
+            "hash": "0a769259b947b8c7d78a33e6026c0cdd73d69c7c3a334791c4efdfee333f3564",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_304_Bed_20260710_205654.jpg",
+            "size": 197135
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_210103.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_212823.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_212141.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_205707.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_211743.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "e0e762e75c248491802fea45e4c4d7e0565b2f16dd5383be6317d67587b63120",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_309_Bed_20260710_205655.jpg",
+            "size": 182624
+        },
+        {
+            "artifact_name": "data",
+            "hash": "eac7d61c04280213c7acf18931ee763cce891570909fa4886ae415d04c88d1eb",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_305_Bed_20260710_205257.jpg",
+            "size": 196044
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_213007.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "0d36ebea939baf1f9a7998ee84bf4f5ccce6f98caf0460b0e19e30ece7621b78",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_308_Bed_20260710_205701.jpg",
+            "size": 55799
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_210908.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "e0e762e75c248491802fea45e4c4d7e0565b2f16dd5383be6317d67587b63120",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_309_Bed_20260710_204050.jpg",
+            "size": 182624
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_213010.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_212138.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_301_Bed_20260709_195306.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "84edb53c389538ac6bea1b4440ff0dafb4acf10483f54d20d860849dab6b1221",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_306_Bed_20260710_205313.jpg",
+            "size": 193834
+        },
+        {
+            "artifact_name": "data",
+            "hash": "0d36ebea939baf1f9a7998ee84bf4f5ccce6f98caf0460b0e19e30ece7621b78",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot2.jpg",
+            "size": 55799
+        },
+        {
+            "artifact_name": "data",
+            "hash": "94fc44d68872a330e3ea8b02b3e1b571c86641c37f7d74c3e6817cd960b5fbff",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_303_Bed_20260710_211438.jpg",
+            "size": 195638
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_210106.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_303_Bed_20260709_181133.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_301_Bed_20260709_181134.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6117000a0142881fe7b6faed675b970656a7c1fe3a9bea0948cb9dd2c3bb1da2",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_307_Bed_20260710_205659.jpg",
+            "size": 99040
+        },
+        {
+            "artifact_name": "data",
+            "hash": "a28ffec72c2876b4692b4e4a1f7b010ae8aed8235ae54a567512e2b0ee288ee1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_306_Bed_routine_20260710_205258.jpg",
+            "size": 195317
+        },
+        {
+            "artifact_name": "data",
+            "hash": "84edb53c389538ac6bea1b4440ff0dafb4acf10483f54d20d860849dab6b1221",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_306_Bed_routine_20260710_205313.jpg",
+            "size": 193834
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_210908.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "0d36ebea939baf1f9a7998ee84bf4f5ccce6f98caf0460b0e19e30ece7621b78",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_308_Bed_20260710_204056.jpg",
+            "size": 55799
+        },
+        {
+            "artifact_name": "data",
+            "hash": "eac7d61c04280213c7acf18931ee763cce891570909fa4886ae415d04c88d1eb",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_305_Bed_20260710_205656.jpg",
+            "size": 196044
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_303_Bed_20260709_195304.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_205307.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_301_Bed_20260709_180606.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_303_Bed_20260709_181530.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "6af99fe9db6e6fe0025390d830b06f64ebcfa9a3f640b5f961b6333e2d96d4a1",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_301_Bed_20260710_211745.jpg",
+            "size": 194017
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_205300.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "ad4545617764756c77085a37886e5c7dee582412146c173e3aa85431a76dcf17",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_302_Bed_20260710_210104.jpg",
+            "size": 196134
+        },
+        {
+            "artifact_name": "data",
+            "hash": "54d4072f4c109a57bc74b848b822632f20f8fa77e781912400141730a67b9fd7",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "labels/snapshot_Room_301_Bed_20260709_191709.txt",
+            "size": 298
+        },
+        {
+            "artifact_name": "data",
+            "hash": "eac7d61c04280213c7acf18931ee763cce891570909fa4886ae415d04c88d1eb",
+            "parent_dataset_id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+            "relative_path": "images/snapshot_Room_305_Bed_20260710_204051.jpg",
+            "size": 196044
+        }
+    ],
+    "dataset_link_entries": [],
+    "dependency_chunk_lookup": {
+        "84ed34eab6fe47a3bbbd1a9122ac45ba": 1
+    },
+    "dependency_graph": {
+        "84ed34eab6fe47a3bbbd1a9122ac45ba": []
+    },
+    "dirty": false,
+    "file_count": 78,
+    "id": "84ed34eab6fe47a3bbbd1a9122ac45ba",
+    "total_size": 11870296
+}

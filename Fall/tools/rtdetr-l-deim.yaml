@@ -1,0 +1,42 @@
+# rtdetr-l-deim.yaml
+# Ultralytics RT-DETR-l backbone with DEIM (Dense-to-Sparse) Hook Config
+
+# Parameters
+nc: 3  # 必須與你的 data.yaml 類別數量一致 (person, bed, wheelchair)
+scales:
+  # [depth, width, max_channels]
+  l: [1.00, 1.00, 1024]
+
+# 1. Backbone (HGNetv2)
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, HGStem, [32, 48, 16]]         # 0-P2/4  (修正：由 5 參數縮減為 3 參數)
+  - [-1, 6, HGBlock, [48, 96, 3]]          # 1-P3/8  (修正：由 5 參數縮減為 3 參數)
+  - [-1, 6, HGBlock, [96, 192, 3]]         # 2-P4/16 (修正：由 5 參數縮減為 3 參數)
+  - [-1, 6, HGBlock, [192, 384, 3]]        # 3-P5/32 (修正：對齊通道數並縮減為 3 參數)
+
+# 2. HybridEncoder (AIFI + CCFM)
+head:
+  - [-1, 1, AIFI, [1024, 8]]
+  - [[-1, 2], 1, Conv, [384, 1, 1, None, 1, 1, False]]  # 5
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [1, 1, Conv, [384, 1, 1, None, 1, 1, False]]
+  - [[-1, -2], 1, Concat, [1]]
+  - [-1, 3, HGBlock, [384, 384, 3, False]]  # 9-P4 (修正末尾參數)
+  
+  - [-1, 1, Conv, [256, 1, 1, None, 1, 1, False]]  # 10
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [0, 1, Conv, [256, 1, 1, None, 1, 1, False]]
+  - [[-1, -2], 1, Concat, [1]]
+  - [-1, 3, HGBlock, [256, 256, 3, False]]  # 14-P3 (修正末尾參數)
+
+  - [-1, 1, Conv, [384, 3, 2, None, 1, 1, False]] # 15-P4
+  - [[-1, 9], 1, Concat, [1]]
+  - [-1, 3, HGBlock, [384, 384, 3, False]]  # 17-P4 (修正末尾參數)
+
+  - [-1, 1, Conv, [1024, 3, 2, None, 1, 1, False]] # 18-P5
+  - [[-1, 4], 1, Concat, [1]]
+  - [-1, 3, HGBlock, [1024, 1024, 3, False]] # 20-P5 (修正末尾參數)
+
+  # 3. DEIM Target Head: 注入一對多密集輔助監督 (Dense-to-Sparse Decoder)
+  - [[14, 17, 20], 1, RTDETRDecoder, [nc, 256, 300, 4, 8, 6]] # 21 (引入 dense_matching 輔助)

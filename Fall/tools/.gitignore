@@ -1,0 +1,22 @@
+# 忽略環境變數與金鑰
+.env
+*.env
+config.json
+
+# 忽略 AI 模型權重檔
+*.pt
+*.pth
+*.onnx
+weights/
+
+# 忽略主動學習的本機暫存圖片與資料集
+active_learning_dataset/
+data/
+*.jpg
+*.png
+*.mp4
+
+# 忽略 Mac 系統產生的垃圾檔案
+.DS_Store
+__pycache__/
+.pytest_cache/

@@ -1,0 +1,1564 @@
+[2026-07-10 03:37:26,264] [1] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 03:37:26,264] [1] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 03:37:26,299] [9] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 03:37:26,300] [9] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 03:37:26,313] [9] [INFO] [clearml.es_factory] Using override elastic host elasticsearch
+[2026-07-10 03:37:26,313] [9] [INFO] [clearml.es_factory] Using override elastic port 9200
+[2026-07-10 03:37:26,346] [1] [WARNING] [clearml.schema_reader] failed loading cache: [Errno 2] No such file or directory: '/opt/clearml/apiserver/schema/services/_cache.json'
+[2026-07-10 03:37:26,346] [1] [INFO] [clearml.schema_reader] regenerating schema cache
+[2026-07-10 03:37:29,271] [9] [WARNING] [clearml.schema_reader] failed loading cache: [Errno 2] No such file or directory: '/opt/clearml/apiserver/schema/services/_cache.json'
+[2026-07-10 03:37:29,276] [9] [INFO] [clearml.schema_reader] regenerating schema cache
+[2026-07-10 03:37:32,366] [9] [INFO] [clearml.app_sequence] ################ API Server initializing #####################
+[2026-07-10 03:37:32,367] [9] [INFO] [clearml.database] Initializing database connections
+[2026-07-10 03:37:32,367] [9] [INFO] [clearml.database] Using override mongodb host mongo
+[2026-07-10 03:37:32,367] [9] [INFO] [clearml.database] Using override mongodb port 27017
+[2026-07-10 03:37:32,368] [9] [INFO] [clearml.database] Registering connection to auth-db (mongodb://mongo:27017/auth)
+[2026-07-10 03:37:32,369] [9] [INFO] [clearml.database] Registering connection to backend-db (mongodb://mongo:27017/backend)
+[2026-07-10 03:37:32,371] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 1 times in a row, putting on 1 second timeout
+[2026-07-10 03:37:32,371] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 03:37:32,375] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 2 times in a row, putting on 2 second timeout
+[2026-07-10 03:37:32,375] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 03:37:32,376] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 3 times in a row, putting on 4 second timeout
+[2026-07-10 03:37:32,376] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 03:37:32,377] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 4 times in a row, putting on 8 second timeout
+[2026-07-10 03:37:32,377] [9] [WARNING] [clearml.initialize] Could not connect to ElasticSearch Service. Retry 1 of 4. Waiting for 30sec
+[2026-07-10 03:38:02,452] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 03:38:02,563] [9] [INFO] [clearml.initialize] [{'component_template': 'events_common', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_log', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_stats_scalar', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_debug_image', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_plot', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 03:38:02,564] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 03:38:02,622] [9] [INFO] [clearml.initialize] [{'index_template': 'worker_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'serving_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'queue_metrics', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 03:38:02,622] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Started mongodb migrations
+[2026-07-10 03:38:02,622] [9] [INFO] [clearml.migration] Checking DB version
+[2026-07-10 03:38:02,623] [9] [INFO] [clearml.migration] DB version: 8.0
+[2026-07-10 03:38:02,629] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 0_12_1.py (empty databases)
+[2026-07-10 03:38:02,631] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 0_13_0.py (empty databases)
+[2026-07-10 03:38:02,632] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 0_14_0.py (empty databases)
+[2026-07-10 03:38:02,632] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 0_15_0.py (empty databases)
+[2026-07-10 03:38:02,633] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 0_16_0.py (empty databases)
+[2026-07-10 03:38:02,634] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 0_16_1.py (empty databases)
+[2026-07-10 03:38:02,634] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 0_16_2.py (empty databases)
+[2026-07-10 03:38:02,635] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 0_17_0.py (empty databases)
+[2026-07-10 03:38:02,635] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 1_0_0.py (empty databases)
+[2026-07-10 03:38:02,636] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 1_0_2.py (empty databases)
+[2026-07-10 03:38:02,636] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 1_3_0.py (empty databases)
+[2026-07-10 03:38:02,637] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 1_6_0.py (empty databases)
+[2026-07-10 03:38:02,637] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 1_7_0.py (empty databases)
+[2026-07-10 03:38:02,638] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Skipping migration 1_9_0.py (empty databases)
+[2026-07-10 03:38:02,638] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Finished mongodb migrations
+[2026-07-10 03:38:02,642] [9] [INFO] [clearml.apiserver.mongo.initialize] Creating company: clearml
+[2026-07-10 03:38:02,655] [9] [INFO] [clearml.apiserver.mongo.initialize] Creating user: apiserver
+[2026-07-10 03:38:02,657] [9] [INFO] [clearml.apiserver.mongo.initialize] Creating user: fileserver
+[2026-07-10 03:38:02,658] [9] [INFO] [clearml.apiserver.mongo.initialize] Creating user: webserver
+[2026-07-10 03:38:02,659] [9] [INFO] [clearml.apiserver.mongo.initialize] Creating user: services_agent
+[2026-07-10 03:38:02,660] [9] [INFO] [clearml.apiserver.mongo.initialize] Creating user: tests
+[2026-07-10 03:38:02,664] [9] [WARNING] [clearml.apiserver.mongo.initialize] Invalid pre-populate entry data/db-pre-populate, skipping
+[2026-07-10 03:38:02,665] [9] [INFO] [clearml.service_repo] Loading services from /opt/clearml/apiserver/services
+[2026-07-10 11:53:08,734] [8] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 11:53:08,736] [8] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 11:53:08,749] [8] [INFO] [clearml.es_factory] Using override elastic host elasticsearch
+[2026-07-10 11:53:08,750] [8] [INFO] [clearml.es_factory] Using override elastic port 9200
+[2026-07-10 11:53:08,851] [8] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-10 11:53:08,928] [8] [INFO] [clearml.app_sequence] ################ API Server initializing #####################
+[2026-07-10 11:53:08,929] [8] [INFO] [clearml.database] Initializing database connections
+[2026-07-10 11:53:08,929] [8] [INFO] [clearml.database] Using override mongodb host mongo
+[2026-07-10 11:53:08,930] [8] [INFO] [clearml.database] Using override mongodb port 27017
+[2026-07-10 11:53:08,931] [8] [INFO] [clearml.database] Registering connection to auth-db (mongodb://mongo:27017/auth)
+[2026-07-10 11:53:08,931] [8] [INFO] [clearml.database] Registering connection to backend-db (mongodb://mongo:27017/backend)
+[2026-07-10 11:53:08,934] [8] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 1 times in a row, putting on 1 second timeout
+[2026-07-10 11:53:08,934] [8] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 11:53:08,939] [8] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 2 times in a row, putting on 2 second timeout
+[2026-07-10 11:53:08,939] [8] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 11:53:08,941] [8] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 3 times in a row, putting on 4 second timeout
+[2026-07-10 11:53:08,941] [8] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 11:53:08,941] [1] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 11:53:08,942] [1] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 11:53:08,942] [8] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 4 times in a row, putting on 8 second timeout
+[2026-07-10 11:53:08,942] [8] [WARNING] [clearml.initialize] Could not connect to ElasticSearch Service. Retry 1 of 4. Waiting for 30sec
+[2026-07-10 11:53:09,008] [1] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-10 11:53:39,021] [8] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 11:53:39,047] [8] [INFO] [clearml.initialize] [{'component_template': 'events_common', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_log', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_stats_scalar', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_debug_image', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_plot', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 11:53:39,048] [8] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 11:53:39,059] [8] [INFO] [clearml.initialize] [{'index_template': 'worker_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'serving_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'queue_metrics', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 11:53:39,059] [8] [INFO] [clearml.apiserver.mongo.initialize.migration] Started mongodb migrations
+[2026-07-10 11:53:39,059] [8] [INFO] [clearml.migration] Checking DB version
+[2026-07-10 11:53:39,062] [8] [INFO] [clearml.migration] DB version: 8.0
+[2026-07-10 11:53:39,065] [8] [INFO] [clearml.apiserver.mongo.initialize.migration] Finished mongodb migrations
+[2026-07-10 11:53:39,073] [8] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __apiserver__ (apiserver)
+[2026-07-10 11:53:39,076] [8] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __fileserver__ (fileserver)
+[2026-07-10 11:53:39,078] [8] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __webserver__ (webserver)
+[2026-07-10 11:53:39,079] [8] [INFO] [clearml.apiserver.mongo.initialize] Resetting credentials for existing user __services_agent__ (services_agent)
+[2026-07-10 11:53:39,080] [8] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __tests__ (tests)
+[2026-07-10 11:53:39,082] [8] [INFO] [clearml.service_repo] Loading services from /opt/clearml/apiserver/services
+[2026-07-10 11:58:52,319] [9] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 11:58:52,320] [9] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 11:58:52,333] [9] [INFO] [clearml.es_factory] Using override elastic host elasticsearch
+[2026-07-10 11:58:52,334] [9] [INFO] [clearml.es_factory] Using override elastic port 9200
+[2026-07-10 11:58:52,404] [9] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-10 11:58:52,481] [1] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 11:58:52,482] [1] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 11:58:52,493] [9] [INFO] [clearml.app_sequence] ################ API Server initializing #####################
+[2026-07-10 11:58:52,493] [9] [INFO] [clearml.database] Initializing database connections
+[2026-07-10 11:58:52,494] [9] [INFO] [clearml.database] Using override mongodb host mongo
+[2026-07-10 11:58:52,494] [9] [INFO] [clearml.database] Using override mongodb port 27017
+[2026-07-10 11:58:52,495] [9] [INFO] [clearml.database] Registering connection to auth-db (mongodb://mongo:27017/auth)
+[2026-07-10 11:58:52,496] [9] [INFO] [clearml.database] Registering connection to backend-db (mongodb://mongo:27017/backend)
+[2026-07-10 11:58:52,498] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 1 times in a row, putting on 1 second timeout
+[2026-07-10 11:58:52,499] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 11:58:52,504] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 2 times in a row, putting on 2 second timeout
+[2026-07-10 11:58:52,504] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 11:58:52,505] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 3 times in a row, putting on 4 second timeout
+[2026-07-10 11:58:52,505] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 11:58:52,507] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 4 times in a row, putting on 8 second timeout
+[2026-07-10 11:58:52,507] [9] [WARNING] [clearml.initialize] Could not connect to ElasticSearch Service. Retry 1 of 4. Waiting for 30sec
+[2026-07-10 11:58:52,550] [1] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-10 11:59:22,556] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 11:59:22,576] [9] [INFO] [clearml.initialize] [{'component_template': 'events_common', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_log', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_stats_scalar', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_debug_image', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_plot', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 11:59:22,577] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 11:59:22,586] [9] [INFO] [clearml.initialize] [{'index_template': 'worker_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'serving_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'queue_metrics', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 11:59:22,586] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Started mongodb migrations
+[2026-07-10 11:59:22,586] [9] [INFO] [clearml.migration] Checking DB version
+[2026-07-10 11:59:22,589] [9] [INFO] [clearml.migration] DB version: 8.0
+[2026-07-10 11:59:22,592] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Finished mongodb migrations
+[2026-07-10 11:59:22,598] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __apiserver__ (apiserver)
+[2026-07-10 11:59:22,601] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __fileserver__ (fileserver)
+[2026-07-10 11:59:22,601] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __webserver__ (webserver)
+[2026-07-10 11:59:22,602] [9] [INFO] [clearml.apiserver.mongo.initialize] Resetting credentials for existing user __services_agent__ (services_agent)
+[2026-07-10 11:59:22,603] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __tests__ (tests)
+[2026-07-10 11:59:22,606] [9] [INFO] [clearml.service_repo] Loading services from /opt/clearml/apiserver/services
+[2026-07-10 12:12:01,978] [9] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 12:12:01,980] [9] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 12:12:01,990] [9] [INFO] [clearml.es_factory] Using override elastic host elasticsearch
+[2026-07-10 12:12:01,990] [9] [INFO] [clearml.es_factory] Using override elastic port 9200
+[2026-07-10 12:12:02,055] [1] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 12:12:02,056] [1] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 12:12:02,075] [9] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-10 12:12:02,131] [1] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-10 12:12:02,164] [9] [INFO] [clearml.app_sequence] ################ API Server initializing #####################
+[2026-07-10 12:12:02,165] [9] [INFO] [clearml.database] Initializing database connections
+[2026-07-10 12:12:02,165] [9] [INFO] [clearml.database] Using override mongodb host mongo
+[2026-07-10 12:12:02,166] [9] [INFO] [clearml.database] Using override mongodb port 27017
+[2026-07-10 12:12:02,167] [9] [INFO] [clearml.database] Registering connection to auth-db (mongodb://mongo:27017/auth)
+[2026-07-10 12:12:02,169] [9] [INFO] [clearml.database] Registering connection to backend-db (mongodb://mongo:27017/backend)
+[2026-07-10 12:12:02,172] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 1 times in a row, putting on 1 second timeout
+[2026-07-10 12:12:02,173] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 12:12:02,178] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 2 times in a row, putting on 2 second timeout
+[2026-07-10 12:12:02,178] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 12:12:02,181] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 3 times in a row, putting on 4 second timeout
+[2026-07-10 12:12:02,183] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 12:12:02,185] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 4 times in a row, putting on 8 second timeout
+[2026-07-10 12:12:02,186] [9] [WARNING] [clearml.initialize] Could not connect to ElasticSearch Service. Retry 1 of 4. Waiting for 30sec
+[2026-07-10 12:12:32,241] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 12:12:32,260] [9] [INFO] [clearml.initialize] [{'component_template': 'events_common', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_log', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_stats_scalar', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_debug_image', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_plot', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 12:12:32,260] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 12:12:32,269] [9] [INFO] [clearml.initialize] [{'index_template': 'worker_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'serving_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'queue_metrics', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 12:12:32,269] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Started mongodb migrations
+[2026-07-10 12:12:32,269] [9] [INFO] [clearml.migration] Checking DB version
+[2026-07-10 12:12:32,272] [9] [INFO] [clearml.migration] DB version: 8.0
+[2026-07-10 12:12:32,275] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Finished mongodb migrations
+[2026-07-10 12:12:32,281] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __apiserver__ (apiserver)
+[2026-07-10 12:12:32,283] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __fileserver__ (fileserver)
+[2026-07-10 12:12:32,284] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __webserver__ (webserver)
+[2026-07-10 12:12:32,285] [9] [INFO] [clearml.apiserver.mongo.initialize] Resetting credentials for existing user __services_agent__ (services_agent)
+[2026-07-10 12:12:32,285] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __tests__ (tests)
+[2026-07-10 12:12:32,288] [9] [INFO] [clearml.service_repo] Loading services from /opt/clearml/apiserver/services
+[2026-07-10 13:07:58,899] [1] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 13:07:58,900] [1] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 13:07:58,944] [9] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 13:07:58,946] [9] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 13:07:58,958] [9] [INFO] [clearml.es_factory] Using override elastic host elasticsearch
+[2026-07-10 13:07:58,958] [9] [INFO] [clearml.es_factory] Using override elastic port 9200
+[2026-07-10 13:07:58,978] [1] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-10 13:07:59,021] [9] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-10 13:07:59,113] [9] [INFO] [clearml.app_sequence] ################ API Server initializing #####################
+[2026-07-10 13:07:59,114] [9] [INFO] [clearml.database] Initializing database connections
+[2026-07-10 13:07:59,114] [9] [INFO] [clearml.database] Using override mongodb host mongo
+[2026-07-10 13:07:59,114] [9] [INFO] [clearml.database] Using override mongodb port 27017
+[2026-07-10 13:07:59,115] [9] [INFO] [clearml.database] Registering connection to auth-db (mongodb://mongo:27017/auth)
+[2026-07-10 13:07:59,116] [9] [INFO] [clearml.database] Registering connection to backend-db (mongodb://mongo:27017/backend)
+[2026-07-10 13:07:59,118] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 1 times in a row, putting on 1 second timeout
+[2026-07-10 13:07:59,119] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 13:07:59,122] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 2 times in a row, putting on 2 second timeout
+[2026-07-10 13:07:59,122] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 13:07:59,124] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 3 times in a row, putting on 4 second timeout
+[2026-07-10 13:07:59,124] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 13:07:59,125] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 4 times in a row, putting on 8 second timeout
+[2026-07-10 13:07:59,126] [9] [WARNING] [clearml.initialize] Could not connect to ElasticSearch Service. Retry 1 of 4. Waiting for 30sec
+[2026-07-10 13:08:29,180] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 13:08:29,200] [9] [INFO] [clearml.initialize] [{'component_template': 'events_common', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_log', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_stats_scalar', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_debug_image', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_plot', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 13:08:29,201] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 13:08:29,210] [9] [INFO] [clearml.initialize] [{'index_template': 'worker_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'serving_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'queue_metrics', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 13:08:29,210] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Started mongodb migrations
+[2026-07-10 13:08:29,210] [9] [INFO] [clearml.migration] Checking DB version
+[2026-07-10 13:08:29,213] [9] [INFO] [clearml.migration] DB version: 8.0
+[2026-07-10 13:08:29,215] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Finished mongodb migrations
+[2026-07-10 13:08:29,221] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __apiserver__ (apiserver)
+[2026-07-10 13:08:29,223] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __fileserver__ (fileserver)
+[2026-07-10 13:08:29,224] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __webserver__ (webserver)
+[2026-07-10 13:08:29,225] [9] [INFO] [clearml.apiserver.mongo.initialize] Resetting credentials for existing user __services_agent__ (services_agent)
+[2026-07-10 13:08:29,225] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __tests__ (tests)
+[2026-07-10 13:08:29,228] [9] [INFO] [clearml.service_repo] Loading services from /opt/clearml/apiserver/services
+[2026-07-10 14:55:15,146] [9] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 14:55:15,148] [9] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 14:55:15,159] [9] [INFO] [clearml.es_factory] Using override elastic host elasticsearch
+[2026-07-10 14:55:15,159] [9] [INFO] [clearml.es_factory] Using override elastic port 9200
+[2026-07-10 14:55:15,262] [9] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-10 14:55:15,375] [9] [INFO] [clearml.app_sequence] ################ API Server initializing #####################
+[2026-07-10 14:55:15,375] [9] [INFO] [clearml.database] Initializing database connections
+[2026-07-10 14:55:15,376] [9] [INFO] [clearml.database] Using override mongodb host mongo
+[2026-07-10 14:55:15,376] [9] [INFO] [clearml.database] Using override mongodb port 27017
+[2026-07-10 14:55:15,377] [9] [INFO] [clearml.database] Registering connection to auth-db (mongodb://mongo:27017/auth)
+[2026-07-10 14:55:15,378] [9] [INFO] [clearml.database] Registering connection to backend-db (mongodb://mongo:27017/backend)
+[2026-07-10 14:55:15,380] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 1 times in a row, putting on 1 second timeout
+[2026-07-10 14:55:15,380] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 14:55:15,386] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 2 times in a row, putting on 2 second timeout
+[2026-07-10 14:55:15,386] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 14:55:15,388] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 3 times in a row, putting on 4 second timeout
+[2026-07-10 14:55:15,388] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-10 14:55:15,389] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 4 times in a row, putting on 8 second timeout
+[2026-07-10 14:55:15,390] [9] [WARNING] [clearml.initialize] Could not connect to ElasticSearch Service. Retry 1 of 4. Waiting for 30sec
+[2026-07-10 14:55:15,410] [1] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-10 14:55:15,411] [1] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-10 14:55:15,475] [1] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-10 14:55:45,467] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 14:55:45,487] [9] [INFO] [clearml.initialize] [{'component_template': 'events_common', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_log', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_stats_scalar', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_debug_image', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_plot', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 14:55:45,487] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-10 14:55:45,495] [9] [INFO] [clearml.initialize] [{'index_template': 'worker_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'serving_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'queue_metrics', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-10 14:55:45,496] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Started mongodb migrations
+[2026-07-10 14:55:45,496] [9] [INFO] [clearml.migration] Checking DB version
+[2026-07-10 14:55:45,498] [9] [INFO] [clearml.migration] DB version: 8.0
+[2026-07-10 14:55:45,501] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Finished mongodb migrations
+[2026-07-10 14:55:45,510] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __apiserver__ (apiserver)
+[2026-07-10 14:55:45,512] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __fileserver__ (fileserver)
+[2026-07-10 14:55:45,513] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __webserver__ (webserver)
+[2026-07-10 14:55:45,514] [9] [INFO] [clearml.apiserver.mongo.initialize] Resetting credentials for existing user __services_agent__ (services_agent)
+[2026-07-10 14:55:45,515] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __tests__ (tests)
+[2026-07-10 14:55:45,518] [9] [INFO] [clearml.service_repo] Loading services from /opt/clearml/apiserver/services
+[2026-07-11 03:02:15,414] [9] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-11 03:02:15,415] [9] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-11 03:02:15,428] [9] [INFO] [clearml.es_factory] Using override elastic host elasticsearch
+[2026-07-11 03:02:15,428] [9] [INFO] [clearml.es_factory] Using override elastic port 9200
+[2026-07-11 03:02:15,524] [9] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-11 03:02:15,624] [9] [INFO] [clearml.app_sequence] ################ API Server initializing #####################
+[2026-07-11 03:02:15,624] [9] [INFO] [clearml.database] Initializing database connections
+[2026-07-11 03:02:15,624] [9] [INFO] [clearml.database] Using override mongodb host mongo
+[2026-07-11 03:02:15,624] [9] [INFO] [clearml.database] Using override mongodb port 27017
+[2026-07-11 03:02:15,625] [9] [INFO] [clearml.database] Registering connection to auth-db (mongodb://mongo:27017/auth)
+[2026-07-11 03:02:15,626] [9] [INFO] [clearml.database] Registering connection to backend-db (mongodb://mongo:27017/backend)
+[2026-07-11 03:02:15,628] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 1 times in a row, putting on 1 second timeout
+[2026-07-11 03:02:15,628] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-11 03:02:15,632] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 2 times in a row, putting on 2 second timeout
+[2026-07-11 03:02:15,632] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-11 03:02:15,634] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 3 times in a row, putting on 4 second timeout
+[2026-07-11 03:02:15,634] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-11 03:02:15,635] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 4 times in a row, putting on 8 second timeout
+[2026-07-11 03:02:15,635] [9] [WARNING] [clearml.initialize] Could not connect to ElasticSearch Service. Retry 1 of 4. Waiting for 30sec
+[2026-07-11 03:02:15,677] [1] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-11 03:02:15,677] [1] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-11 03:02:15,742] [1] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-11 03:19:28,485] [1] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-11 03:19:28,486] [1] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-11 03:19:28,551] [1] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-11 03:19:28,551] [9] [INFO] [clearml.redis_manager] Using override redis host redis
+[2026-07-11 03:19:28,552] [9] [INFO] [clearml.redis_manager] Using override redis port 6379
+[2026-07-11 03:19:28,561] [9] [INFO] [clearml.es_factory] Using override elastic host elasticsearch
+[2026-07-11 03:19:28,561] [9] [INFO] [clearml.es_factory] Using override elastic port 9200
+[2026-07-11 03:19:28,620] [9] [INFO] [clearml.schema_reader] loading schema from cache
+[2026-07-11 03:19:28,689] [9] [INFO] [clearml.app_sequence] ################ API Server initializing #####################
+[2026-07-11 03:19:28,691] [9] [INFO] [clearml.database] Initializing database connections
+[2026-07-11 03:19:28,692] [9] [INFO] [clearml.database] Using override mongodb host mongo
+[2026-07-11 03:19:28,698] [9] [INFO] [clearml.database] Using override mongodb port 27017
+[2026-07-11 03:19:28,700] [9] [INFO] [clearml.database] Registering connection to auth-db (mongodb://mongo:27017/auth)
+[2026-07-11 03:19:28,702] [9] [INFO] [clearml.database] Registering connection to backend-db (mongodb://mongo:27017/backend)
+[2026-07-11 03:19:28,706] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 1 times in a row, putting on 1 second timeout
+[2026-07-11 03:19:28,709] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-11 03:19:28,713] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 2 times in a row, putting on 2 second timeout
+[2026-07-11 03:19:28,714] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-11 03:19:28,719] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 3 times in a row, putting on 4 second timeout
+[2026-07-11 03:19:28,721] [9] [WARNING] [elastic_transport.transport] Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/retry.py", line 465, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(HTTPConnection(host='elasticsearch', port=9200): Failed to establish a new connection: [Errno 111] Connection refused)
+[2026-07-11 03:19:28,725] [9] [WARNING] [elastic_transport.node_pool] Node <Urllib3HttpNode(http://elasticsearch:9200)> has failed for 4 times in a row, putting on 8 second timeout
+[2026-07-11 03:19:28,726] [9] [WARNING] [clearml.initialize] Could not connect to ElasticSearch Service. Retry 1 of 4. Waiting for 30sec
+[2026-07-11 03:19:58,806] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-11 03:19:58,828] [9] [INFO] [clearml.initialize] [{'component_template': 'events_common', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_log', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_stats_scalar', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_training_debug_image', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'events_plot', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-11 03:19:58,828] [9] [INFO] [clearml.initialize] Applying mappings to ES host: [ConfigTree([('host', 'elasticsearch'), ('port', 9200), ('scheme', 'http')])]
+[2026-07-11 03:19:58,837] [9] [INFO] [clearml.initialize] [{'index_template': 'worker_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'serving_stats', 'result': ObjectApiResponse({'acknowledged': True})}, {'index_template': 'queue_metrics', 'result': ObjectApiResponse({'acknowledged': True})}]
+[2026-07-11 03:19:58,837] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Started mongodb migrations
+[2026-07-11 03:19:58,838] [9] [INFO] [clearml.migration] Checking DB version
+[2026-07-11 03:19:58,840] [9] [INFO] [clearml.migration] DB version: 8.0
+[2026-07-11 03:19:58,843] [9] [INFO] [clearml.apiserver.mongo.initialize.migration] Finished mongodb migrations
+[2026-07-11 03:19:58,851] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __apiserver__ (apiserver)
+[2026-07-11 03:19:58,854] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __fileserver__ (fileserver)
+[2026-07-11 03:19:58,855] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __webserver__ (webserver)
+[2026-07-11 03:19:58,856] [9] [INFO] [clearml.apiserver.mongo.initialize] Resetting credentials for existing user __services_agent__ (services_agent)
+[2026-07-11 03:19:58,857] [9] [INFO] [clearml.apiserver.mongo.initialize] Setting credentials for existing user __tests__ (tests)
+[2026-07-11 03:19:58,860] [9] [INFO] [clearml.service_repo] Loading services from /opt/clearml/apiserver/services

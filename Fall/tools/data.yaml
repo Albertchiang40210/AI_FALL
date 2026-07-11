@@ -1,0 +1,12 @@
+# 🚨 核心修正：使用絕對路徑，徹底防止 Ultralytics 在 Mac 系統環境下定位錯誤
+path: /Users/albert/Documents/專案/AIPE03/Fall/active_learning_dataset
+train: images
+val: images
+
+# 方形框環境與長輩偵測類別映射表 (與自動預標註、Label Studio 100% 同構)
+names:
+  0: person
+  1: chair
+  2: sofa
+  3: bed
+  4: tv
